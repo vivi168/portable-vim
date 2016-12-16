@@ -66,7 +66,7 @@ se incsearch
 se showmatch
 runtime macros/matchit.vim
 
-nmap & :Ggrep! <c-r>=expand("<cword>")<cr><cr>
+nmap ^ :Ggrep! <c-r>=expand("<cword>")<cr><cr>
 nmap <leader>/ :Ggrep!<space>
 autocmd QuickFixCmdPost *grep* cwindow
 
