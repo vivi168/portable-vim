@@ -75,10 +75,7 @@ se splitright
 se splitbelow
 se diffopt+=vertical
 
-function SwitchBuffer()
-  b#
-endfunction
-nmap <tab> :call SwitchBuffer()<cr>
+nmap <tab> :b#<cr>
 
 " NERDTree
 map <c-t> :NERDTreeToggle<cr>
