@@ -12,7 +12,10 @@ call plug#begin(s:portable.'/plugged')
 "call plug#begin()
   Plug 'https://github.com/tpope/vim-sensible'
   Plug 'https://github.com/tpope/vim-fugitive'
+  Plug 'https://github.com/tpope/vim-repeat'
   Plug 'https://github.com/tpope/vim-surround'
+  Plug 'https://github.com/tpope/vim-commentary'
+  Plug 'https://github.com/tpope/vim-rails'
   Plug 'https://github.com/ctrlpvim/ctrlp.vim'
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/junegunn/vim-easy-align'
@@ -21,6 +24,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/vim-airline/vim-airline'
   Plug 'https://github.com/vim-airline/vim-airline-themes'
   Plug 'https://github.com/airblade/vim-gitgutter'
+  Plug 'https://github.com/easymotion/vim-easymotion'
   Plug 'https://github.com/terryma/vim-multiple-cursors'
   Plug 'https://github.com/scrooloose/nerdtree'
 call plug#end()
