@@ -102,6 +102,12 @@ nmap <leader>ws :FixWhitespace<cr>
 xmap ga <plug>(EasyAlign)
 nmap ga <plug>(EasyAlign)
 
+" Git Gutter
+nmap <leader>n <plug>GitGutterNextHunk
+nmap <leader>p <plug>GitGutterPrevHunk
+nmap <leader>a <plug>GitGutterStageHunk
+nmap <leader>u <plug>GitGutterUndoHunk
+
 " Movements
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
