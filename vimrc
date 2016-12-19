@@ -117,3 +117,5 @@ nmap <c-l> <c-w>l
 nmap j gj
 nmap k gk
 
+" Quickfix window
+nmap q :ccl<cr>
