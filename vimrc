@@ -35,9 +35,9 @@ nnoremap <space> <nop>
 
 " Colors
 syntax enable
-se t_Co=256
-set background=light
-let g:solarized_termcolors=256
+"se t_Co=256
+set background=dark
+"let g:solarized_termcolors=256
 colorscheme solarized
 
 " Tabs
