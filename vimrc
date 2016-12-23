@@ -91,8 +91,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode='r'
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
-let g:ctrlp_user_command = 'find %s -type f'
-set wildignore+=*/tmp/*,*/var/*,*/log/*,*/media/*,*/vendor/gems/*,*.so,*.swp,*.zip
+let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard %s', 'find %s -type f']
 nmap <leader>b :CtrlPBuffer<cr>
 
 " Fix white spaces
