@@ -53,6 +53,9 @@ se nobackup
 se nowb
 se noswapfile
 
+nmap <leader>w :w<cr>
+nmap <leader>e :e<space>
+
 " Visual
 se rnu
 se cursorline
