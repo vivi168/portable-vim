@@ -28,6 +28,9 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/easymotion/vim-easymotion'
   Plug 'https://github.com/terryma/vim-multiple-cursors'
   Plug 'https://github.com/scrooloose/nerdtree'
+  Plug 'https://github.com/nathanaelkane/vim-indent-guides'
+  Plug 'https://github.com/vim-scripts/closetag.vim'
+  Plug 'https://github.com/Townk/vim-autoclose'
 call plug#end()
 
 " Leader mapped to Space
@@ -100,9 +103,17 @@ nmap <leader>b :CtrlPBuffer<cr>
 " Fix white spaces
 nmap <leader>ws :FixWhitespace<cr>
 
+" Close tags
+imap <c-c> <c-r>=GetCloseTag()<cr>
+map <c-c> a<c-c><esc>
+
 " Easy Align
 xmap ga <plug>(EasyAlign)
 nmap ga <plug>(EasyAlign)
+
+" Surround
+nmap <leader>ss ysiw
+nmap <leader>SS ysiW
 
 " Git Gutter
 nmap <leader>n <plug>GitGutterNextHunk
@@ -121,3 +132,8 @@ nmap k gk
 
 " Quickfix window
 nmap q :ccl<cr>
+
+" Indent Guide
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
