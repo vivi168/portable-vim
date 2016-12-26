@@ -56,8 +56,8 @@ se nobackup
 se nowb
 se noswapfile
 
-nmap <leader>w :w<cr>
-nmap <leader>e :e<space>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>e :e<space>
 
 " Visual
 se rnu
@@ -77,8 +77,8 @@ se incsearch
 se showmatch
 runtime macros/matchit.vim
 
-nmap ^ :Ggrep! <c-r>=expand("<cword>")<cr><cr>
-nmap <leader>/ :Ggrep!<space>
+nnoremap ^ :Ggrep! <c-r>=expand("<cword>")<cr><cr>
+nnoremap <leader>/ :Ggrep!<space>
 autocmd QuickFixCmdPost *grep* cwindow
 
 " Buffers
@@ -86,10 +86,10 @@ se splitright
 se splitbelow
 se diffopt+=vertical
 
-nmap <tab> :b#<cr>
+nnoremap <tab> :b#<cr>
 
 " NERDTree
-map <c-t> :NERDTreeToggle<cr>
+nnoremap <c-t> :NERDTreeToggle<cr>
 
 " CtrlP
 let g:ctrlp_map = '<leader>o'
@@ -98,14 +98,13 @@ let g:ctrlp_working_path_mode='r'
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard %s', 'find %s -type f']
-nmap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Fix white spaces
-nmap <leader>ws :FixWhitespace<cr>
+nnoremap <leader>ws :FixWhitespace<cr>
 
 " Close tags
-imap <c-c> <c-r>=GetCloseTag()<cr>
-map <c-c> a<c-c><esc>
+inoremap <c-c> <c-r>=GetCloseTag()<cr>
 
 " Easy Align
 xmap ga <plug>(EasyAlign)
@@ -122,13 +121,13 @@ nmap <leader>a <plug>GitGutterStageHunk
 nmap <leader>u <plug>GitGutterUndoHunk
 
 " Movements
-nmap <c-h> <c-w>h
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-nmap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
 
 " Quickfix window
 nmap q :ccl<cr>
