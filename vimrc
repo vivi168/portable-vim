@@ -129,5 +129,5 @@ nmap q :ccl<cr>
 
 " Indent Guide
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=237
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
