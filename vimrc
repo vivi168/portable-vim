@@ -29,8 +29,6 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/terryma/vim-multiple-cursors'
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/nathanaelkane/vim-indent-guides'
-  Plug 'https://github.com/vim-scripts/closetag.vim'
-  Plug 'https://github.com/Townk/vim-autoclose'
 call plug#end()
 
 " Leader mapped to Space
@@ -102,9 +100,6 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
-
-" Close tags
-inoremap <c-c> <c-r>=GetCloseTag()<cr>
 
 " Easy Align
 xmap ga <plug>(EasyAlign)
