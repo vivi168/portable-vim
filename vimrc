@@ -75,7 +75,7 @@ se incsearch
 se showmatch
 runtime macros/matchit.vim
 
-nnoremap ^ :Ggrep! <c-r>=expand("<cword>")<cr><cr>
+nnoremap & :Ggrep! <c-r>=expand("<cword>")<cr><cr>
 nnoremap <leader>/ :Ggrep!<space>
 autocmd QuickFixCmdPost *grep* cwindow
 
@@ -96,7 +96,7 @@ let g:ctrlp_working_path_mode='r'
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard %s', 'find %s -type f']
-nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader><tab> :CtrlPBuffer<cr>
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
