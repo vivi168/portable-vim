@@ -88,6 +88,7 @@ nnoremap <tab> :b#<cr>
 
 " NERDTree
 nnoremap <c-t> :NERDTreeToggle<cr>
+let NERDTreeQuitOnOpen=1
 
 " CtrlP
 let g:ctrlp_map = '<leader>o'
