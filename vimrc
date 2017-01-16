@@ -29,6 +29,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/terryma/vim-multiple-cursors'
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/nathanaelkane/vim-indent-guides'
+  Plug 'https://github.com/ap/vim-buftabline'
 call plug#end()
 
 " Leader mapped to Space
@@ -124,6 +125,10 @@ nnoremap <c-l> <c-w>l
 
 nnoremap j gj
 nnoremap k gk
+
+" Buff line
+nnoremap <c-i> :bprev<cr>
+nnoremap <c-o> :bnext<cr>
 
 " Quickfix window
 nmap q :ccl<cr>
