@@ -85,6 +85,9 @@ se splitright
 se splitbelow
 se diffopt+=vertical
 
+" Buff line
+nnoremap <c-i> :bprev<cr>
+nnoremap <c-o> :bnext<cr>
 nnoremap <tab> :b#<cr>
 
 " NERDTree
@@ -125,10 +128,6 @@ nnoremap <c-l> <c-w>l
 
 nnoremap j gj
 nnoremap k gk
-
-" Buff line
-nnoremap <c-i> :bprev<cr>
-nnoremap <c-o> :bnext<cr>
 
 " Quickfix window
 nmap q :ccl<cr>
