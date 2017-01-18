@@ -86,8 +86,8 @@ se splitbelow
 se diffopt+=vertical
 
 " Buff line
-nnoremap <c-w> :bprev<cr>
-nnoremap <c-o> :bnext<cr>
+nnoremap <c-e> :bprev<cr>
+nnoremap <c-y> :bnext<cr>
 nnoremap <tab> :b#<cr>
 
 " NERDTree
