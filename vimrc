@@ -126,6 +126,20 @@ nnoremap <c-l> <c-w>l
 nnoremap j gj
 nnoremap k gk
 
+" Easier Easy Motion
+nmap w <Plug>(easymotion-w)
+nmap b <Plug>(easymotion-b)
+nmap e <Plug>(easymotion-e)
+nmap ge <Plug>(easymotion-ge)
+nmap W <Plug>(easymotion-W)
+nmap B <Plug>(easymotion-B)
+nmap E <Plug>(easymotion-E)
+nmap gE <Plug>(easymotion-gE)
+nmap f <Plug>(easymotion-f)
+nmap F <Plug>(easymotion-F)
+nmap t <Plug>(easymotion-t)
+nmap T <Plug>(easymotion-T)
+
 " Quickfix window
 nmap q :ccl<cr>
 
