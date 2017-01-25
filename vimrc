@@ -73,8 +73,8 @@ se incsearch
 se showmatch
 runtime macros/matchit.vim
 
-nnoremap @ :Ggrep! <c-r>=expand("<cword>")<cr><cr>
-nnoremap <leader>/ :Ggrep!<space>
+nnoremap @ :silent Ggrep! <c-r>=expand("<cword>")<cr><cr>
+nnoremap <leader>/ :silent Ggrep!<space>
 autocmd QuickFixCmdPost *grep* cwindow
 
 " Buffers
@@ -82,13 +82,12 @@ se splitright
 se splitbelow
 se diffopt+=vertical
 
-" Buff line
-nnoremap <c-e> :bprev<cr>
-nnoremap <c-y> :bnext<cr>
+" Buffer
 nnoremap <tab> :b#<cr>
 
 " NERDTree
 nnoremap <c-t> :NERDTreeToggle<cr>
+nnoremap <leader>t :NERDTreeFind<cr>
 let NERDTreeQuitOnOpen=1
 
 " CtrlP
