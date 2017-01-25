@@ -20,7 +20,6 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/junegunn/vim-easy-align'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
-  Plug 'https://github.com/altercation/vim-colors-solarized'
   Plug 'https://github.com/joshdick/onedark.vim'
   Plug 'https://github.com/vim-airline/vim-airline'
   Plug 'https://github.com/vim-airline/vim-airline-themes'
@@ -29,7 +28,6 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/terryma/vim-multiple-cursors'
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/nathanaelkane/vim-indent-guides'
-  Plug 'https://github.com/ap/vim-buftabline'
 call plug#end()
 
 " Leader mapped to Space
@@ -59,7 +57,6 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>e :e<space>
 
 " Visual
-se rnu
 se cursorline
 se nowrap
 se laststatus=2
@@ -76,7 +73,7 @@ se incsearch
 se showmatch
 runtime macros/matchit.vim
 
-nnoremap & :Ggrep! <c-r>=expand("<cword>")<cr><cr>
+nnoremap @ :Ggrep! <c-r>=expand("<cword>")<cr><cr>
 nnoremap <leader>/ :Ggrep!<space>
 autocmd QuickFixCmdPost *grep* cwindow
 
