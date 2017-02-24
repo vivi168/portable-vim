@@ -76,6 +76,7 @@ runtime macros/matchit.vim
 nnoremap @ :silent Ggrep! <c-r>=expand("<cword>")<cr><cr>
 nnoremap <leader>/ :silent Ggrep!<space>
 autocmd QuickFixCmdPost *grep* cwindow
+autocmd QuickFixCmdPost *grep* redraw!
 
 " Buffers
 se splitright
