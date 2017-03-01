@@ -87,8 +87,8 @@ se diffopt+=vertical
 nnoremap <tab> :b#<cr>
 
 " NERDTree
-nnoremap <c-t> :NERDTreeToggle<cr>
-nnoremap <leader>t :NERDTreeFind<cr>
+nnoremap <leader>t :NERDTreeToggle<cr>
+nnoremap <leader>f :NERDTreeFind<cr>
 let NERDTreeQuitOnOpen=1
 
 " CtrlP
