@@ -89,8 +89,8 @@ se diffopt+=vertical
 nnoremap <tab> :b#<cr>
 
 " NERDTree
-nnoremap <leader>t :NERDTreeToggle<cr>
-nnoremap <leader>f :NERDTreeFind<cr>
+nnoremap <c-t> :NERDTreeToggle<cr>
+nnoremap <c-f> :NERDTreeFind<cr>
 let NERDTreeQuitOnOpen=1
 
 " CtrlP
@@ -102,7 +102,7 @@ let g:ctrlp_max_depth=40
 let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard %s', 'find %s -type f']
 let g:ctrlp_match_window = 'results:100'
 nnoremap <leader><tab> :CtrlPBuffer<cr>
-nnoremap <leader>r :CtrlPMRUFiles<cr>
+nnoremap <leader><leader><tab> :CtrlPMRUFiles<cr>
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
@@ -128,21 +128,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
 nnoremap j gj
+vnoremap j gj
 nnoremap k gk
-
-" Easier Easy Motion
-nmap w <Plug>(easymotion-w)
-nmap b <Plug>(easymotion-b)
-nmap e <Plug>(easymotion-e)
-nmap ge <Plug>(easymotion-ge)
-nmap W <Plug>(easymotion-W)
-nmap B <Plug>(easymotion-B)
-nmap E <Plug>(easymotion-E)
-nmap gE <Plug>(easymotion-gE)
-nmap f <Plug>(easymotion-f)
-nmap F <Plug>(easymotion-F)
-nmap t <Plug>(easymotion-t)
-nmap T <Plug>(easymotion-T)
+vnoremap k gk
 
 " Quickfix window
 nmap q :ccl<cr>
