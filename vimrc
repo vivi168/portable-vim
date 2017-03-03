@@ -43,7 +43,7 @@ colorscheme onedark
 
 " Tabs
 se tabstop=2 "tab width
-se shiftwidth=2 "ident width (<< >> ==)
+se shiftwidth=2 "indent width (<< >> ==)
 se expandtab "insert tabs as spaces
 
 " Files
