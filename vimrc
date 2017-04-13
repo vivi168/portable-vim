@@ -60,7 +60,6 @@ nnoremap <leader>e :e<space>
 se cursorline
 se nu
 se wrap
-se linebreak
 se laststatus=2
 let g:airline_powerline_fonts=1
 se showcmd
