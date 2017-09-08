@@ -11,7 +11,7 @@ let &runtimepath = printf('%s,%s,%s/after', s:portable, &runtimepath, s:portable
 call plug#begin(s:portable.'/plugged')
 "call plug#begin()
   Plug 'https://github.com/tpope/vim-sensible'
-  Plug 'https://github.com/tpope/vim-fugitive'
+  " Plug 'https://github.com/tpope/vim-fugitive'
   Plug 'https://github.com/tpope/vim-repeat'
   Plug 'https://github.com/tpope/vim-surround'
   Plug 'https://github.com/tpope/vim-commentary'
@@ -21,13 +21,12 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/junegunn/vim-easy-align'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/joshdick/onedark.vim'
-  Plug 'https://github.com/vim-airline/vim-airline'
-  Plug 'https://github.com/vim-airline/vim-airline-themes'
+  " Plug 'https://github.com/vim-airline/vim-airline'
+  " Plug 'https://github.com/vim-airline/vim-airline-themes'
   Plug 'https://github.com/airblade/vim-gitgutter'
   Plug 'https://github.com/easymotion/vim-easymotion'
   Plug 'https://github.com/terryma/vim-multiple-cursors'
   Plug 'https://github.com/scrooloose/nerdtree'
-  Plug 'https://github.com/nathanaelkane/vim-indent-guides'
 call plug#end()
 
 " Leader mapped to Space
@@ -61,7 +60,7 @@ se cursorline
 se nu
 se wrap
 se laststatus=2
-let g:airline_powerline_fonts=1
+" let g:airline_powerline_fonts=1
 se showcmd
 se ruler
 se title
@@ -74,10 +73,10 @@ se incsearch
 se showmatch
 runtime macros/matchit.vim
 
-nnoremap @ :silent Ggrep! <c-r>=expand("<cword>")<cr><cr>
-nnoremap <leader>/ :silent Ggrep!<space>
-autocmd QuickFixCmdPost *grep* cwindow
-autocmd QuickFixCmdPost *grep* redraw!
+" nnoremap @ :silent Ggrep! <c-r>=expand("<cword>")<cr><cr>
+" nnoremap <leader>/ :silent Ggrep!<space>
+" autocmd QuickFixCmdPost *grep* cwindow
+" autocmd QuickFixCmdPost *grep* redraw!
 
 " Buffers
 se splitright
@@ -133,8 +132,3 @@ vnoremap k gk
 
 " Quickfix window
 nmap q :ccl<cr>
-
-" Indent Guide
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=237
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
