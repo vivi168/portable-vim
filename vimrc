@@ -92,7 +92,7 @@ nnoremap <c-f> :NERDTreeFind<cr>
 let NERDTreeQuitOnOpen=1
 
 " CtrlP
-let g:ctrlp_map = '<leader>o'
+let g:ctrlp_map = '<c-o>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode='r'
 let g:ctrlp_max_files=0
