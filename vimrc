@@ -100,7 +100,7 @@ let g:ctrlp_max_depth=40
 let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard %s', 'find %s -type f']
 let g:ctrlp_match_window = 'results:100'
 nnoremap <c-b> :CtrlPBuffer<cr>
-nnoremap <c-h> :CtrlPMRUFiles<cr>
+nnoremap <c-m> :CtrlPMRUFiles<cr>
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
