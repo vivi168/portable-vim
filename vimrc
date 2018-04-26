@@ -21,6 +21,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/junegunn/vim-easy-align'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/joshdick/onedark.vim'
+  Plug 'https://github.com/NLKNguyen/papercolor-theme'
   " Plug 'https://github.com/vim-airline/vim-airline'
   " Plug 'https://github.com/vim-airline/vim-airline-themes'
   Plug 'https://github.com/airblade/vim-gitgutter'
@@ -36,9 +37,9 @@ nnoremap <space> <nop>
 " Colors
 syntax enable
 se t_Co=256
-set background=dark
-let g:onedark_termcolors=256
-colorscheme onedark
+set background=light
+" let g:onedark_termcolors=256
+colorscheme PaperColor
 
 " Tabs
 se tabstop=2 "tab width
