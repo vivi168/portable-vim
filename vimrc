@@ -9,25 +9,16 @@ let s:portable = expand('<sfile>:p:h')
 let &runtimepath = printf('%s,%s,%s/after', s:portable, &runtimepath, s:portable)
 
 call plug#begin(s:portable.'/plugged')
-"call plug#begin()
   Plug 'https://github.com/tpope/vim-sensible'
-  " Plug 'https://github.com/tpope/vim-fugitive'
-  Plug 'https://github.com/tpope/vim-repeat'
-  Plug 'https://github.com/tpope/vim-surround'
   Plug 'https://github.com/tpope/vim-commentary'
-  Plug 'https://github.com/tpope/vim-rails'
+  Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+  Plug 'https://github.com/mileszs/ack.vim'
   Plug 'https://github.com/ervandew/supertab'
-  Plug 'https://github.com/junegunn/vim-easy-align'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
-  Plug 'https://github.com/joshdick/onedark.vim'
-  Plug 'https://github.com/NLKNguyen/papercolor-theme'
-  " Plug 'https://github.com/vim-airline/vim-airline'
-  " Plug 'https://github.com/vim-airline/vim-airline-themes'
   Plug 'https://github.com/airblade/vim-gitgutter'
   Plug 'https://github.com/easymotion/vim-easymotion'
-  Plug 'https://github.com/terryma/vim-multiple-cursors'
-  Plug 'https://github.com/scrooloose/nerdtree'
+  Plug 'https://github.com/NLKNguyen/papercolor-theme'
 call plug#end()
 
 " Leader mapped to Space
@@ -38,7 +29,6 @@ nnoremap <space> <nop>
 syntax enable
 se t_Co=256
 set background=light
-" let g:onedark_termcolors=256
 colorscheme PaperColor
 
 " Tabs
@@ -53,15 +43,11 @@ se nobackup
 se nowb
 se noswapfile
 
-nnoremap <leader>w :w<cr>
-nnoremap <leader>e :e<space>
-
 " Visual
 se cursorline
 se nu
 se wrap
 se laststatus=2
-" let g:airline_powerline_fonts=1
 se showcmd
 se ruler
 se title
@@ -73,11 +59,6 @@ se incsearch
 
 se showmatch
 runtime macros/matchit.vim
-
-" nnoremap @ :silent Ggrep! <c-r>=expand("<cword>")<cr><cr>
-" nnoremap <leader>/ :silent Ggrep!<space>
-" autocmd QuickFixCmdPost *grep* cwindow
-" autocmd QuickFixCmdPost *grep* redraw!
 
 " Buffers
 se splitright
@@ -93,26 +74,18 @@ nnoremap <c-f> :NERDTreeFind<cr>
 let NERDTreeQuitOnOpen=1
 
 " CtrlP
-let g:ctrlp_map = '<c-o>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode='r'
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=40
 let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard %s', 'find %s -type f']
-let g:ctrlp_match_window = 'results:100'
 nnoremap <c-b> :CtrlPBuffer<cr>
-nnoremap <c-m> :CtrlPMRUFiles<cr>
+nnoremap <leader>m :CtrlPMRUFiles<cr>
+
+" Ack.vim
+nnoremap <Leader>s :Ack!<Space>
+if executable('ag')
+  let g:ackprg = 'git grep -n'
+endif
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
-
-" Easy Align
-xmap ga <plug>(EasyAlign)
-nmap ga <plug>(EasyAlign)
-
-" Surround
-nmap <leader>ss ysiw
-nmap <leader>SS ysiW
 
 " Git Gutter
 nmap <leader>n <plug>GitGutterNextHunk
