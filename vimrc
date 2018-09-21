@@ -80,9 +80,7 @@ nnoremap <leader>m :CtrlPMRUFiles<cr>
 
 " Ack.vim
 nnoremap <Leader>s :Ack!<Space>
-if executable('ag')
-  let g:ackprg = 'git grep -n'
-endif
+let g:ackprg = 'git grep -n'
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
