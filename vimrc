@@ -5,8 +5,13 @@ filetype plugin indent on
 let &runtimepath = printf('%s/vimfiles,%s,%s/vimfiles/after', $VIM, $VIMRUNTIME, $VIM)
 " what is the name of the directory containing this file?
 let s:portable = expand('<sfile>:p:h')
+let $VIMHOME = s:portable
+
 " add the directory to 'runtimepath'
 let &runtimepath = printf('%s,%s,%s/after', s:portable, &runtimepath, s:portable)
+
+set undodir=$VIMHOME/undodir
+set undofile
 
 call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-sensible'
