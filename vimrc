@@ -23,6 +23,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/airblade/vim-gitgutter'
   Plug 'https://github.com/easymotion/vim-easymotion'
+  Plug 'https://github.com/itchyny/lightline.vim'
   Plug 'https://github.com/NLKNguyen/papercolor-theme'
 call plug#end()
 
