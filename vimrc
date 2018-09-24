@@ -112,3 +112,12 @@ vnoremap k gk
 
 " Quickfix window
 nmap q :ccl<cr>
+
+if has("gui_running")
+  set guioptions=
+  set guifont=Courier:h14
+  set noerrorbells
+  set novisualbell
+  set t_vb=
+  autocmd! GUIEnter * set vb t_vb=
+endif
