@@ -17,8 +17,11 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-sensible'
   Plug 'https://github.com/tpope/vim-commentary'
   Plug 'https://github.com/scrooloose/nerdtree'
-  Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-  Plug 'https://github.com/mileszs/ack.vim'
+  Plug 'https://github.com/junegunn/fzf'
+  Plug 'https://github.com/junegunn/fzf.vim'
+  if !executable('rg')
+    Plug 'https://github.com/mileszs/ack.vim'
+  end
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/airblade/vim-gitgutter'
@@ -79,15 +82,18 @@ nnoremap <c-t> :NERDTreeToggle<cr>
 nnoremap <c-f> :NERDTreeFind<cr>
 let NERDTreeQuitOnOpen=1
 
-" CtrlP
-let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard %s', 'find %s -type f']
-nnoremap <c-b> :CtrlPBuffer<cr>
-nnoremap <leader>m :CtrlPMRUFiles<cr>
+" FZF
+nnoremap <leader>f :Files<cr>
+nnoremap <c-b> :History<cr>
 
-" Ack.vim
-let g:ackprg = 'git grep -n'
-nnoremap <Leader>s :Ack!<Space>
-nnoremap @ :Ack!<cr>
+if executable('rg')
+  nnoremap <Leader>s :Rg<space>
+else
+  let g:ackprg = 'git grep -n'
+
+  nnoremap <Leader>s :Ack!<Space>
+  nnoremap @ :Ack!<cr>
+end
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
