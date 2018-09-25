@@ -10,7 +10,7 @@ vim -u ~/.portable-vim/vimrc
 
 Don't forget to run `:PlugInstall` on the first launch.
 
-## How use ripgrep with fzf
+## How to use ripgrep with fzf
 
 If you have rg installed, you can add this line to your .bashrc to make fzf use rg
 
