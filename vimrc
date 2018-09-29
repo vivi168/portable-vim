@@ -84,7 +84,8 @@ let NERDTreeQuitOnOpen=1
 
 " FZF
 nnoremap <leader>f :Files<cr>
-nnoremap <c-b> :History<cr>
+nnoremap <leader>hi :History<cr>
+nnoremap <c-b> :Buffers<cr>
 
 if executable('rg')
   nnoremap <Leader>s :Rg<space>
