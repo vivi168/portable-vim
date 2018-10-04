@@ -37,9 +37,14 @@ nnoremap <space> <nop>
 
 " Colors
 syntax enable
-se t_Co=256
+if !has("gui_running")
+  se t_Co=256
+end
 set background=light
 colorscheme PaperColor
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ }
 
 " Tabs
 se tabstop=2 "tab width
