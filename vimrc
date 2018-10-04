@@ -131,7 +131,7 @@ endif
 
 
 " Quickfix window
-nmap q :ccl<cr>
+nmap <leader>q :ccl<cr>
 
 if has("gui_running")
   set guioptions=
