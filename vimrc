@@ -57,6 +57,7 @@ se ffs=unix
 se nobackup
 se nowb
 se noswapfile
+se autowriteall
 
 " Visual
 se cursorline
