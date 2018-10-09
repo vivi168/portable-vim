@@ -17,6 +17,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-sensible'
   Plug 'https://github.com/tpope/vim-commentary'
   Plug 'https://github.com/tpope/vim-fugitive'
+  Plug 'https://github.com/junegunn/gv.vim'
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
