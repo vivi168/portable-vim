@@ -89,7 +89,6 @@ se splitright
 se splitbelow
 se diffopt+=vertical
 
-" Buffer
 nnoremap <tab> :b#<cr>
 
 " NERDTree
@@ -137,10 +136,10 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-
 " Quickfix window
 nmap <leader>q :ccl<cr>
 
+" GUI options
 if has("gui_running")
   set guioptions=
   set guifont=Courier:h14
