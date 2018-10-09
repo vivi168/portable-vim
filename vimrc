@@ -14,22 +14,29 @@ set undodir=$VIMHOME/undodir
 set undofile
 
 call plug#begin(s:portable.'/plugged')
+  " Utils
   Plug 'https://github.com/tpope/vim-sensible'
   Plug 'https://github.com/tpope/vim-commentary'
+  Plug 'https://github.com/ervandew/supertab'
+  Plug 'https://github.com/bronson/vim-trailing-whitespace'
+
+  " Git
   Plug 'https://github.com/tpope/vim-fugitive'
   Plug 'https://github.com/junegunn/gv.vim'
+  Plug 'https://github.com/airblade/vim-gitgutter'
+
+  " Files
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
   if !executable('rg')
     Plug 'https://github.com/mileszs/ack.vim'
   end
-  Plug 'https://github.com/ervandew/supertab'
-  Plug 'https://github.com/bronson/vim-trailing-whitespace'
-  Plug 'https://github.com/airblade/vim-gitgutter'
-  Plug 'https://github.com/easymotion/vim-easymotion'
-  Plug 'https://github.com/itchyny/lightline.vim'
+
+  " Themes & appearance
   Plug 'https://github.com/NLKNguyen/papercolor-theme'
+  Plug 'https://github.com/itchyny/lightline.vim'
+  Plug 'https://github.com/junegunn/goyo.vim'
 call plug#end()
 
 " Leader mapped to Space
