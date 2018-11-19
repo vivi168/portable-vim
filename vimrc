@@ -118,10 +118,6 @@ end
 nnoremap <leader>ws :FixWhitespace<cr>
 
 " Git Gutter
-nmap <leader>n <plug>GitGutterNextHunk
-nmap <leader>p <plug>GitGutterPrevHunk
-nmap <leader>hs <plug>GitGutterStageHunk
-nmap <leader>hu <plug>GitGutterUndoHunk
 set updatetime=100
 
 " Movements
