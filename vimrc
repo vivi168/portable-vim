@@ -35,6 +35,7 @@ call plug#begin(s:portable.'/plugged')
 
   " Themes & appearance
   Plug 'https://github.com/NLKNguyen/papercolor-theme'
+  Plug 'https://github.com/junegunn/seoul256.vim'
   Plug 'https://github.com/itchyny/lightline.vim'
   Plug 'https://github.com/junegunn/goyo.vim'
 call plug#end()
@@ -48,10 +49,13 @@ syntax enable
 if !has("gui_running")
   se t_Co=256
 end
+if exists('+termguicolors')
+  set termguicolors
+end
 set background=light
-colorscheme PaperColor
+colorscheme seoul256-light
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'seoul256',
       \ }
 
 " Tabs
