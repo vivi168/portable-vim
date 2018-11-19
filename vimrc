@@ -111,7 +111,6 @@ else
   let g:ackprg = 'git grep -n'
 
   nnoremap <Leader>s :Ack!<Space>
-  nnoremap @ :Ack!<cr>
 end
 
 " Fix white spaces
