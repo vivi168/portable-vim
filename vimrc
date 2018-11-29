@@ -22,6 +22,9 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/vim-ruby/vim-ruby'
   Plug 'https://github.com/tpope/vim-rails'
   Plug 'https://github.com/tpope/vim-dadbod'
+  if executable('ctags')
+    Plug 'https://github.com/majutsushi/tagbar'
+  end
   Plug 'https://github.com/w0rp/ale'
 
   " Git
@@ -129,6 +132,11 @@ nmap ]h <plug>GitGutterPrevHunk
 nmap <silent> [l <Plug>(ale_previous_wrap)
 nmap <silent> ]l <Plug>(ale_next_wrap)
 nmap <silent> <leader>l <Plug>(ale_detail)
+
+" TagBar
+if executable('ctags')
+  nnoremap <leader>t :TagbarToggle<cr>
+end
 
 " Movements
 nnoremap <c-h> <c-w>h
