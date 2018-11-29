@@ -19,6 +19,9 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-commentary'
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
+  Plug 'https://github.com/vim-ruby/vim-ruby'
+  Plug 'https://github.com/tpope/vim-rails'
+  Plug 'https://github.com/tpope/vim-dadbod'
 
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
