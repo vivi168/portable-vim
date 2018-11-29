@@ -22,6 +22,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/vim-ruby/vim-ruby'
   Plug 'https://github.com/tpope/vim-rails'
   Plug 'https://github.com/tpope/vim-dadbod'
+  Plug 'https://github.com/w0rp/ale'
 
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
@@ -123,6 +124,11 @@ nnoremap <leader>ws :FixWhitespace<cr>
 set updatetime=100
 nmap [h <plug>GitGutterNextHunk
 nmap ]h <plug>GitGutterPrevHunk
+
+" ALE
+nmap <silent> [l <Plug>(ale_previous_wrap)
+nmap <silent> ]l <Plug>(ale_next_wrap)
+nmap <silent> <leader>l <Plug>(ale_detail)
 
 " Movements
 nnoremap <c-h> <c-w>h
