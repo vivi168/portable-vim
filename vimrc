@@ -25,7 +25,9 @@ call plug#begin(s:portable.'/plugged')
   if executable('ctags')
     Plug 'https://github.com/majutsushi/tagbar'
   end
-  Plug 'https://github.com/w0rp/ale'
+  if v:version >= 800
+    Plug 'https://github.com/w0rp/ale'
+  end
 
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
@@ -129,9 +131,11 @@ nmap [h <plug>GitGutterPrevHunk
 nmap ]h <plug>GitGutterNextHunk
 
 " ALE
-nmap <silent> [l <Plug>(ale_previous_wrap)
-nmap <silent> ]l <Plug>(ale_next_wrap)
-nmap <silent> <leader>l <Plug>(ale_detail)
+if v:version >= 800
+  nmap <silent> [l <Plug>(ale_previous_wrap)
+  nmap <silent> ]l <Plug>(ale_next_wrap)
+  nmap <silent> <leader>l <Plug>(ale_detail)
+end
 
 " TagBar
 if executable('ctags')
