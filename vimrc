@@ -125,8 +125,8 @@ nnoremap <leader>ws :FixWhitespace<cr>
 
 " Git Gutter
 set updatetime=100
-nmap [h <plug>GitGutterNextHunk
-nmap ]h <plug>GitGutterPrevHunk
+nmap [h <plug>GitGutterPrevHunk
+nmap ]h <plug>GitGutterNextHunk
 
 " ALE
 nmap <silent> [l <Plug>(ale_previous_wrap)
