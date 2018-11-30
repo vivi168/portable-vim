@@ -45,27 +45,14 @@ call plug#begin(s:portable.'/plugged')
   " Themes & appearance
   Plug 'https://github.com/NLKNguyen/papercolor-theme'
   Plug 'https://github.com/junegunn/seoul256.vim'
+  Plug 'https://github.com/lifepillar/vim-solarized8'
   Plug 'https://github.com/itchyny/lightline.vim'
   Plug 'https://github.com/junegunn/goyo.vim'
 call plug#end()
 
-" Leader mapped to Space
-let mapleader = "\<Space>"
-nnoremap <space> <nop>
-
-" Colors
-syntax enable
-if !has("gui_running")
-  se t_Co=256
-end
-if exists('+termguicolors')
-  set termguicolors
-end
-set background=light
-colorscheme seoul256-light
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ }
+source $VIMHOME/color.vim
+source $VIMHOME/mapping.vim
+source $VIMHOME/plugins.vim
 
 " Tabs
 se tabstop=2 "tab width
@@ -93,80 +80,9 @@ se mouse=
 " Search
 se hlsearch
 se incsearch
-
 se showmatch
-runtime macros/matchit.vim
 
 " Buffers
 se splitright
 se splitbelow
 se diffopt+=vertical
-
-nnoremap <tab> :b#<cr>
-
-" NERDTree
-nnoremap <c-t> :NERDTreeToggle<cr>
-nnoremap <c-f> :NERDTreeFind<cr>
-let NERDTreeQuitOnOpen=1
-
-" FZF
-nnoremap <leader>f :Files<cr>
-nnoremap <leader>hi :History<cr>
-nnoremap <c-b> :Buffers<cr>
-
-if executable('rg')
-  nnoremap <Leader>s :Rg<space>
-else
-  let g:ackprg = 'git grep -n'
-
-  nnoremap <Leader>s :Ack!<Space>
-end
-
-" Fix white spaces
-nnoremap <leader>ws :FixWhitespace<cr>
-
-" Git Gutter
-set updatetime=100
-nmap [h <plug>GitGutterPrevHunk
-nmap ]h <plug>GitGutterNextHunk
-
-" ALE
-if v:version >= 800
-  nmap <silent> [l <Plug>(ale_previous_wrap)
-  nmap <silent> ]l <Plug>(ale_next_wrap)
-  nmap <silent> <leader>l <Plug>(ale_detail)
-end
-
-" TagBar
-if executable('ctags')
-  nnoremap <leader>t :TagbarToggle<cr>
-end
-
-" Movements
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-nnoremap j gj
-vnoremap j gj
-nnoremap k gk
-vnoremap k gk
-
-" Have Vim jump to the last position when reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-
-" Quickfix window
-nmap <leader>q :ccl<cr>
-
-" GUI options
-if has("gui_running")
-  set guioptions=
-  set guifont=Courier:h14
-  set noerrorbells
-  set novisualbell
-  set t_vb=
-  autocmd! GUIEnter * set vb t_vb=
-endif
