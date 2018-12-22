@@ -44,9 +44,9 @@ if has("autocmd")
 endif
 
 " Vim Startify
-function! StartifyEntryFormat()
-  return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-endfunction
+" function! StartifyEntryFormat()
+  " return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+" endfunction
 
 autocmd User Startified setlocal cursorline
 
