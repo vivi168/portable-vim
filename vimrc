@@ -48,6 +48,9 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/lifepillar/vim-solarized8'
   Plug 'https://github.com/itchyny/lightline.vim'
   Plug 'https://github.com/junegunn/goyo.vim'
+
+  " Misc
+  Plug 'https://github.com/mhinz/vim-startify'
 call plug#end()
 
 source $VIMHOME/color.vim
