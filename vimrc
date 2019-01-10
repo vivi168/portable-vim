@@ -19,24 +19,13 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-commentary'
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
-  if executable('ctags')
-    Plug 'https://github.com/majutsushi/tagbar'
-  end
-  if v:version >= 800
-    Plug 'https://github.com/w0rp/ale'
-  end
 
   " Ruby
   Plug 'https://github.com/vim-ruby/vim-ruby'
   Plug 'https://github.com/tpope/vim-rails'
 
   " Javascript
-  " Plug 'https://github.com/pangloss/vim-javascript'
-  " Plug 'https://github.com/mxw/vim-jsx'
   Plug 'https://github.com/neoclide/vim-jsx-improve'
-
-  " DB
-  Plug 'https://github.com/tpope/vim-dadbod'
 
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
@@ -47,19 +36,10 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
-  if !executable('rg')
-    Plug 'https://github.com/mileszs/ack.vim'
-  end
 
   " Themes & appearance
-  Plug 'https://github.com/NLKNguyen/papercolor-theme'
   Plug 'https://github.com/junegunn/seoul256.vim'
-  Plug 'https://github.com/lifepillar/vim-solarized8'
   Plug 'https://github.com/itchyny/lightline.vim'
-  Plug 'https://github.com/junegunn/goyo.vim'
-
-  " Misc
-  Plug 'https://github.com/mhinz/vim-startify'
 call plug#end()
 
 source $VIMHOME/color.vim
@@ -77,7 +57,6 @@ se ffs=unix
 se nobackup
 se nowb
 se noswapfile
-se autowriteall
 
 " Visual
 se cursorline
@@ -93,6 +72,7 @@ se mouse=
 se hlsearch
 se incsearch
 se showmatch
+se smartcase
 
 " Buffers
 se splitright
