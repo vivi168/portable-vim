@@ -47,8 +47,6 @@ source $VIMHOME/mapping.vim
 source $VIMHOME/plugins.vim
 
 " Tabs
-se tabstop=2 "tab width
-se shiftwidth=2 "indent width (<< >> ==)
 se expandtab "insert tabs as spaces
 
 " Files
