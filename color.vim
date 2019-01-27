@@ -6,8 +6,8 @@ end
 if exists('+termguicolors')
   set termguicolors
 end
-set background=light
-colorscheme seoul256-light
+set background=dark
+colorscheme nord
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'nord',
       \ }

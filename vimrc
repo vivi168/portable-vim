@@ -39,6 +39,7 @@ call plug#begin(s:portable.'/plugged')
 
   " Themes & appearance
   Plug 'https://github.com/junegunn/seoul256.vim'
+  Plug 'https://github.com/arcticicestudio/nord-vim'
   Plug 'https://github.com/itchyny/lightline.vim'
 call plug#end()
 
@@ -62,6 +63,7 @@ se nu
 se wrap
 se laststatus=2
 se showcmd
+se noshowmode
 se ruler
 se title
 se mouse=
@@ -70,6 +72,7 @@ se mouse=
 se hlsearch
 se incsearch
 se showmatch
+se ignorecase
 se smartcase
 
 " Buffers
