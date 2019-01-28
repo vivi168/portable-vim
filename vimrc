@@ -23,6 +23,7 @@ call plug#begin(s:portable.'/plugged')
   " Ruby
   Plug 'https://github.com/vim-ruby/vim-ruby'
   Plug 'https://github.com/tpope/vim-rails'
+  Plug 'https://github.com/thoughtbot/vim-rspec'
 
   " Javascript
   Plug 'https://github.com/neoclide/vim-jsx-improve'
