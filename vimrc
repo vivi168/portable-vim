@@ -29,6 +29,9 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/neoclide/vim-jsx-improve'
   Plug 'https://github.com/kchmck/vim-coffee-script'
 
+  " ASM
+  Plug 'https://github.com/ARM9/snes-syntax-vim'
+
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
   Plug 'https://github.com/junegunn/gv.vim'
@@ -55,6 +58,8 @@ se expandtab "insert tabs as spaces
 au BufNewFile,BufRead *.coffee set filetype=coffee
 au Filetype javascript setlocal ts=4 sw=4
 au Filetype coffee setlocal ts=4 sw=4
+au BufNewFile,BufRead *.asm,*.inc set filetype=snes
+au Filetype snes setlocal ts=4 sw=4
 
 " Files
 se encoding=utf8
