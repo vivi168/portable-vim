@@ -59,7 +59,7 @@ au BufNewFile,BufRead *.coffee set filetype=coffee
 au Filetype javascript setlocal ts=4 sw=4
 au Filetype coffee setlocal ts=4 sw=4
 au BufNewFile,BufRead *.asm,*.inc set filetype=snes
-au Filetype snes setlocal ts=4 sw=4
+au Filetype snes setlocal ts=4 sw=4 commentstring=;\ %s
 
 " Files
 se encoding=utf8
