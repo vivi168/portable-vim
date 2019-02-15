@@ -34,6 +34,7 @@ call plug#begin(s:portable.'/plugged')
 
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
+  Plug 'https://github.com/tpope/vim-rhubarb'
   Plug 'https://github.com/junegunn/gv.vim'
   Plug 'https://github.com/airblade/vim-gitgutter'
 
@@ -41,11 +42,13 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
+  Plug 'https://github.com/airblade/vim-rooter'
 
   " Themes & appearance
   Plug 'https://github.com/junegunn/seoul256.vim'
   Plug 'https://github.com/arcticicestudio/nord-vim'
   Plug 'https://github.com/itchyny/lightline.vim'
+  Plug 'https://github.com/junegunn/goyo.vim'
 call plug#end()
 
 source $VIMHOME/color.vim
@@ -57,7 +60,8 @@ se expandtab "insert tabs as spaces
 " File specific
 au BufNewFile,BufRead *.coffee set filetype=coffee
 au Filetype javascript setlocal ts=4 sw=4
-au Filetype coffee setlocal ts=4 sw=4
+au Filetype coffee setlocal ts=2 sw=2
+au Filetype scss setlocal ts=2 sw=2
 au BufNewFile,BufRead *.asm,*.inc set filetype=snes
 au Filetype snes setlocal ts=4 sw=4 commentstring=;\ %s
 
