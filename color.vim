@@ -16,4 +16,11 @@ let g:nord_uniform_diff_background=1
 colorscheme nord
 let g:lightline = {
       \ 'colorscheme': 'nord',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste', 'readonly' ],
+      \             [ 'filename', 'gitbranch', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
       \ }
