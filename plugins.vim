@@ -5,15 +5,18 @@ nnoremap <c-t> :NERDTreeToggle<cr>
 nnoremap <c-f> :NERDTreeFind<cr>
 let NERDTreeQuitOnOpen=1
 
-" FZF
-nnoremap <leader>f :Files<cr>
-nnoremap <leader>hi :History<cr>
-nnoremap <c-b> :Buffers<cr>
-nnoremap <Leader>s :Rg<space>
+" CtrlP
+let g:ctrlp_map = '<leader>f'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_user_command = 'rg --files --no-ignore-vcs --hidden %s'
+nnoremap <leader>hi :CtrlPMRUFiles<cr>
+nnoremap <c-b> :CtrlPBuffer<cr>
 
-" Rg
-nnoremap K :Rg <C-R><C-W><cr>
-vnoremap K y:Rg <C-R>"<CR><cr>
+" Ack
+let g:ackprg = 'rg --vimgrep --no-ignore-vcs --hidden'
+nnoremap <leader>s :Ack!<space>
+nnoremap K :Ack! <C-R><C-W><cr>
+vnoremap K y:Ack! <C-R>"<CR><cr>
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>

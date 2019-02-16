@@ -40,8 +40,8 @@ call plug#begin(s:portable.'/plugged')
 
   " Files
   Plug 'https://github.com/scrooloose/nerdtree'
-  Plug 'https://github.com/junegunn/fzf'
-  Plug 'https://github.com/junegunn/fzf.vim'
+  Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+  Plug 'https://github.com/mileszs/ack.vim'
   Plug 'https://github.com/airblade/vim-rooter'
 
   " Themes & appearance
