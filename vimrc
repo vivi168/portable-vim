@@ -47,6 +47,7 @@ call plug#begin(s:portable.'/plugged')
   " Themes & appearance
   Plug 'https://github.com/junegunn/seoul256.vim'
   Plug 'https://github.com/arcticicestudio/nord-vim'
+  Plug 'https://github.com/morhetz/gruvbox'
   Plug 'https://github.com/itchyny/lightline.vim'
   Plug 'https://github.com/junegunn/goyo.vim'
 call plug#end()
