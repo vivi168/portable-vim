@@ -8,10 +8,10 @@ if exists('+termguicolors')
 end
 set background=dark
 
-let g:nord_italic=1
-let g:nord_italic_comments=1
-let g:nord_comment_brightness=12
-let g:nord_uniform_diff_background=1
+let g:gruvbox_italic=1
+let g:gruvbox_italicize_comments=1
+let g:gruvbox_sign_column='bg0'
+let g:gruvbox_vert_split='bg1'
 
 colorscheme gruvbox
 let g:lightline = { 'colorscheme': 'gruvbox' }
