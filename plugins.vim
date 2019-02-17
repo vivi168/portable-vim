@@ -35,3 +35,11 @@ nnoremap <leader>rl :call RunLastSpec()<CR>
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" Set cwd to current git repository
+au BufLeave * let b:last_cwd = getcwd()
+au BufEnter * if exists('b:last_cwd')
+           \|   execute 'lcd' b:last_cwd
+           \| else
+           \|   silent! Glcd
+           \| endif

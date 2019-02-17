@@ -42,7 +42,6 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/ctrlpvim/ctrlp.vim'
   Plug 'https://github.com/mileszs/ack.vim'
-  Plug 'https://github.com/airblade/vim-rooter'
 
   " Themes & appearance
   Plug 'https://github.com/junegunn/seoul256.vim'
