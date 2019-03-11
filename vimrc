@@ -23,6 +23,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/janko/vim-test'
+  Plug 'https://github.com/godlygeek/tabular'
 
   " Ruby
   Plug 'https://github.com/vim-ruby/vim-ruby'
