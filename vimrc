@@ -17,17 +17,23 @@ call plug#begin(s:portable.'/plugged')
   " Utils
   Plug 'https://github.com/tpope/vim-sensible'
   Plug 'https://github.com/tpope/vim-commentary'
+  Plug 'https://github.com/tpope/vim-sleuth'
+  Plug 'https://github.com/tpope/vim-unimpaired'
+  Plug 'https://github.com/tpope/vim-dispatch'
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
+  Plug 'https://github.com/janko/vim-test'
 
   " Ruby
   Plug 'https://github.com/vim-ruby/vim-ruby'
   Plug 'https://github.com/tpope/vim-rails'
-  Plug 'https://github.com/thoughtbot/vim-rspec'
 
   " Javascript
   Plug 'https://github.com/neoclide/vim-jsx-improve'
   Plug 'https://github.com/kchmck/vim-coffee-script'
+
+  " YAML
+  Plug 'https://github.com/lmeijvogel/vim-yaml-helper'
 
   " ASM
   Plug 'https://github.com/ARM9/snes-syntax-vim'
@@ -39,13 +45,10 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/airblade/vim-gitgutter'
 
   " Files
-  Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/ctrlpvim/ctrlp.vim'
   Plug 'https://github.com/mileszs/ack.vim'
 
   " Themes & appearance
-  Plug 'https://github.com/junegunn/seoul256.vim'
-  Plug 'https://github.com/arcticicestudio/nord-vim'
   Plug 'https://github.com/morhetz/gruvbox'
   Plug 'https://github.com/itchyny/lightline.vim'
   Plug 'https://github.com/junegunn/goyo.vim'
@@ -59,11 +62,8 @@ source $VIMHOME/plugins.vim
 se expandtab "insert tabs as spaces
 " File specific
 au BufNewFile,BufRead *.coffee set filetype=coffee
-au Filetype javascript setlocal ts=4 sw=4
-au Filetype coffee setlocal ts=2 sw=2
-au Filetype scss setlocal ts=2 sw=2
 au BufNewFile,BufRead *.asm,*.inc set filetype=snes
-au Filetype snes setlocal ts=4 sw=4 commentstring=;\ %s
+au Filetype snes setlocal commentstring=;\ %s
 
 " Files
 se encoding=utf8
@@ -94,3 +94,6 @@ se smartcase
 se splitright
 se splitbelow
 se diffopt+=vertical
+
+" Netrw
+let g:netrw_banner=0

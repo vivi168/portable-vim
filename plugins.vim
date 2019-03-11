@@ -1,20 +1,16 @@
 runtime macros/matchit.vim
 
-" NERDTree
-nnoremap <c-t> :NERDTreeToggle<cr>
-nnoremap <c-f> :NERDTreeFind<cr>
-let NERDTreeQuitOnOpen=1
-
 " CtrlP
-let g:ctrlp_map = '<leader>f'
+let g:ctrlp_map = '<c-f>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_max_files=0
+let g:ctrlp_use_caching=0
 let g:ctrlp_user_command = 'rg --files --no-ignore-vcs --hidden %s'
-nnoremap <leader>hi :CtrlPMRUFiles<cr>
 nnoremap <c-b> :CtrlPBuffer<cr>
 
 " Ack
 let g:ackprg = 'rg --vimgrep --no-ignore-vcs --hidden'
-nnoremap <leader>s :Ack!<space>
+nnoremap <leader>/ :Ack!<space>
 nnoremap K :Ack! <C-R><C-W><cr>
 vnoremap K y:Ack! <C-R>"<CR><cr>
 
@@ -26,10 +22,11 @@ set updatetime=100
 nmap [h <plug>GitGutterPrevHunk
 nmap ]h <plug>GitGutterNextHunk
 
-" Vim Rspec
-nnoremap <leader>rn :call RunNearestSpec()<CR>
-nnoremap <leader>rc :call RunCurrentSpecFile()<CR>
-nnoremap <leader>rl :call RunLastSpec()<CR>
+" Vim Test
+let test#strategy = "dispatch"
+nnoremap <silent> <Leader>rc :TestFile<CR>
+nnoremap <silent> <Leader>rn :TestNearest<CR>
+nnoremap <silent> <Leader>rl :TestLast<CR>
 
 " Have Vim jump to the last position when reopening a file
 if has("autocmd")
