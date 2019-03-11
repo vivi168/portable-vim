@@ -1,5 +1,10 @@
 runtime macros/matchit.vim
 
+" NERDTree
+command! E NERDTree
+command! F NERDTreeFind
+let NERDTreeQuitOnOpen=1
+
 " CtrlP
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_cmd = 'CtrlP'

@@ -45,6 +45,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/airblade/vim-gitgutter'
 
   " Files
+  Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/ctrlpvim/ctrlp.vim'
   Plug 'https://github.com/mileszs/ack.vim'
 
@@ -94,6 +95,3 @@ se smartcase
 se splitright
 se splitbelow
 se diffopt+=vertical
-
-" Netrw
-let g:netrw_banner=0
