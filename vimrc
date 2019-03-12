@@ -96,3 +96,6 @@ se smartcase
 se splitright
 se splitbelow
 se diffopt+=vertical
+
+" Term
+au TerminalOpen * setlocal listchars= nonu nornu
