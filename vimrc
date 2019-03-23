@@ -20,6 +20,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-sleuth'
   Plug 'https://github.com/tpope/vim-unimpaired'
   Plug 'https://github.com/tpope/vim-dispatch'
+  Plug 'https://github.com/tpope/vim-surround'
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/janko/vim-test'
