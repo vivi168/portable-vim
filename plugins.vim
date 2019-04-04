@@ -5,19 +5,16 @@ command! E NERDTree
 command! F NERDTreeFind
 let NERDTreeQuitOnOpen=1
 
-" CtrlP
-let g:ctrlp_map = '<c-f>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_max_files=0
-let g:ctrlp_use_caching=0
-let g:ctrlp_user_command = 'rg --files --no-ignore-vcs --hidden %s'
-nnoremap <c-b> :CtrlPBuffer<cr>
-
-" Ack
-let g:ackprg = 'rg --vimgrep --no-ignore-vcs --hidden'
-nnoremap <leader>/ :Ack!<space>
-nnoremap K :Ack! <C-R><C-W><cr>
-vnoremap K y:Ack! <C-R>"<CR><cr>
+" FZF
+nnoremap <c-f> :Files<cr>
+nnoremap <c-b> :Buffers<cr>
+command! -bang -nargs=* Rg
+      \ call fzf#vim#grep(
+      \ "rg --vimgrep --no-ignore-vcs --hidden --smart-case --color=always ".shellescape(<q-args>), 1, <bang>0
+      \ )
+nnoremap <leader>/ :Rg<space>
+nnoremap K :Rg <C-R><C-W><cr>
+vnoremap K y:Rg <C-R>"<CR><cr>
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
