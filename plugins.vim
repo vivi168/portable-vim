@@ -10,7 +10,7 @@ nnoremap <c-f> :Files<cr>
 nnoremap <c-b> :Buffers<cr>
 command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
-      \ "rg --vimgrep --no-ignore-vcs --hidden --smart-case --color=always ".shellescape(<q-args>), 1, <bang>0
+      \ "rg --vimgrep --no-ignore-vcs --hidden --smart-case --color=always ".<q-args>, 1, <bang>0
       \ )
 nnoremap <leader>/ :Rg<space>
 nnoremap K :Rg <C-R><C-W><cr>
