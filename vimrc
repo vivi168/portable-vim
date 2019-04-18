@@ -76,7 +76,7 @@ se nowb
 se noswapfile
 
 " Visual
-se cursorline
+se nocursorline
 se nu
 se wrap
 se laststatus=2
