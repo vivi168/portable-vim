@@ -16,10 +16,10 @@ set undofile
 call plug#begin(s:portable.'/plugged')
   " Utils
   Plug 'https://github.com/tpope/vim-sensible'
+  Plug 'https://github.com/tpope/vim-repeat'
   Plug 'https://github.com/tpope/vim-commentary'
   Plug 'https://github.com/tpope/vim-sleuth'
   Plug 'https://github.com/tpope/vim-unimpaired'
-  Plug 'https://github.com/tpope/vim-dispatch'
   Plug 'https://github.com/tpope/vim-surround'
   Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
@@ -54,7 +54,6 @@ call plug#begin(s:portable.'/plugged')
   " Themes & appearance
   Plug 'https://github.com/morhetz/gruvbox'
   Plug 'https://github.com/itchyny/lightline.vim'
-  Plug 'https://github.com/junegunn/goyo.vim'
 call plug#end()
 
 source $VIMHOME/color.vim
@@ -78,6 +77,7 @@ se noswapfile
 " Visual
 se nocursorline
 se nu
+se rnu
 se wrap
 se laststatus=2
 se showcmd

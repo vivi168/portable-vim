@@ -14,7 +14,3 @@ let g:gruvbox_vert_split='bg1'
 
 colorscheme gruvbox
 let g:lightline = { 'colorscheme': 'gruvbox' }
-
-" GUI
-se guioptions=
-se guifont=Source\ Code\ Pro:h14

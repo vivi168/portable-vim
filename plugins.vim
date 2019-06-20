@@ -24,8 +24,10 @@ set updatetime=100
 nmap [h <plug>GitGutterPrevHunk
 nmap ]h <plug>GitGutterNextHunk
 
+" YAML
+let g:vim_yaml_helper#auto_display_path = 0
+
 " Vim Test
-let test#strategy = "dispatch"
 nnoremap <silent> <Leader>rc :TestFile<CR>
 nnoremap <silent> <Leader>rn :TestNearest<CR>
 nnoremap <silent> <Leader>rl :TestLast<CR>
