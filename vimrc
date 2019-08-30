@@ -15,13 +15,10 @@ set undofile
 
 call plug#begin(s:portable.'/plugged')
   " Utils
-  Plug 'https://github.com/tpope/vim-sensible'
   Plug 'https://github.com/tpope/vim-repeat'
   Plug 'https://github.com/tpope/vim-commentary'
   Plug 'https://github.com/tpope/vim-sleuth'
-  Plug 'https://github.com/tpope/vim-unimpaired'
   Plug 'https://github.com/tpope/vim-surround'
-  Plug 'https://github.com/ervandew/supertab'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/janko/vim-test'
   Plug 'https://github.com/godlygeek/tabular'
@@ -42,18 +39,13 @@ call plug#begin(s:portable.'/plugged')
 
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
-  Plug 'https://github.com/tpope/vim-rhubarb'
-  Plug 'https://github.com/junegunn/gv.vim'
-  Plug 'https://github.com/airblade/vim-gitgutter'
 
   " Files
-  Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
 
   " Themes & appearance
   Plug 'https://github.com/morhetz/gruvbox'
-  Plug 'https://github.com/itchyny/lightline.vim'
 call plug#end()
 
 source $VIMHOME/color.vim
@@ -61,6 +53,9 @@ source $VIMHOME/mapping.vim
 source $VIMHOME/plugins.vim
 
 " Tabs
+se autoindent
+se backspace=indent,eol,start
+se smarttab
 se expandtab "insert tabs as spaces
 " File specific
 au BufNewFile,BufRead *.coffee set filetype=coffee
@@ -76,15 +71,16 @@ se noswapfile
 
 " Visual
 se nocursorline
-se nu
-se rnu
+" se nu
+" se rnu
 se wrap
-se laststatus=2
+" se laststatus=2
 se showcmd
-se noshowmode
+se wildmenu
 se ruler
 se title
 se mouse=
+se scrolloff=3
 
 " Search
 se hlsearch

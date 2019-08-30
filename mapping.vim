@@ -5,11 +5,20 @@ nnoremap <space> <nop>
 nnoremap <tab> :b#<cr>
 nnoremap <leader>l :noh<cr>
 
+command! W :w
+nnoremap q: <nop>
+nnoremap Q <nop>
+
 " Movements
 nnoremap j gj
 vnoremap j gj
 nnoremap k gk
 vnoremap k gk
+
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " Quickfix window
 nmap <leader>q :ccl<cr>
