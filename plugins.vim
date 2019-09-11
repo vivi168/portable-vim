@@ -1,8 +1,8 @@
 runtime macros/matchit.vim
 
 " NERDTree
-command! E Ntree
-command! F Explore
+command! E NERDTreeToggle
+command! F NERDTreeFind
 let NERDTreeQuitOnOpen=1
 
 " FZF

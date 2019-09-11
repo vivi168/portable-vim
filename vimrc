@@ -41,6 +41,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-fugitive'
 
   " Files
+  Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
 
@@ -68,6 +69,7 @@ se ffs=unix
 se nobackup
 se nowb
 se noswapfile
+se autoread
 
 " Visual
 se nocursorline

@@ -2,11 +2,12 @@
 let mapleader = "\<Space>"
 nnoremap <space> <nop>
 
+nmap [b :bp<cr>
+nmap ]b :bn<cr>
 nnoremap <tab> :b#<cr>
 nnoremap <leader>l :noh<cr>
 
 command! W :w
-nnoremap q: <nop>
 nnoremap Q <nop>
 
 " Movements
