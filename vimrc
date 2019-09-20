@@ -73,10 +73,7 @@ se autoread
 
 " Visual
 se nocursorline
-" se nu
-" se rnu
 se wrap
-" se laststatus=2
 se showcmd
 se wildmenu
 se ruler
@@ -95,6 +92,3 @@ se smartcase
 se splitright
 se splitbelow
 se diffopt+=vertical
-
-" Term
-au TerminalOpen * setlocal listchars= nonu nornu
