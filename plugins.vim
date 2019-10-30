@@ -31,6 +31,7 @@ let g:vim_yaml_helper#auto_display_path = 0
 nnoremap <silent> <Leader>rc :TestFile<CR>
 nnoremap <silent> <Leader>rn :TestNearest<CR>
 nnoremap <silent> <Leader>rl :TestLast<CR>
+" let test#strategy = "dispatch"
 
 " Have Vim jump to the last position when reopening a file
 if has("autocmd")

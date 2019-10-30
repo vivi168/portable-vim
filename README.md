@@ -21,3 +21,9 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 ```
 
 You may also want to customize your `~/.rgignore` to suit your needs.
+
+## tmux
+
+```
+ln -s ~/.vim/tmux.conf ~/.tmux.conf
+```

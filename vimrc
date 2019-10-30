@@ -19,9 +19,11 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-commentary'
   Plug 'https://github.com/tpope/vim-sleuth'
   Plug 'https://github.com/tpope/vim-surround'
+  Plug 'https://github.com/tpope/vim-dispatch'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/janko/vim-test'
   Plug 'https://github.com/godlygeek/tabular'
+  Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
   " Ruby
   Plug 'https://github.com/vim-ruby/vim-ruby'
