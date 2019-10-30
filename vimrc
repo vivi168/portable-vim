@@ -48,6 +48,7 @@ call plug#begin(s:portable.'/plugged')
 
   " Themes & appearance
   Plug 'https://github.com/morhetz/gruvbox'
+  Plug 'https://github.com/lifepillar/vim-solarized8'
 call plug#end()
 
 source $VIMHOME/color.vim
