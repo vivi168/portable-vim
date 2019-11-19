@@ -37,7 +37,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/lmeijvogel/vim-yaml-helper'
 
   " ASM
-  Plug 'https://github.com/ARM9/snes-syntax-vim'
+  Plug 'https://github.com/vivi168/vim-snes-asm'
 
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
@@ -64,8 +64,6 @@ se smarttab
 se expandtab "insert tabs as spaces
 " File specific
 au BufNewFile,BufRead *.coffee set filetype=coffee
-au BufNewFile,BufRead *.asm,*.inc set filetype=snes
-au Filetype snes setlocal commentstring=;\ %s
 
 " Files
 se encoding=utf8
