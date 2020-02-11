@@ -8,6 +8,4 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 end
 
-let g:solarized_diffmode="high"
-
-colorscheme solarized8
+colorscheme seoul256

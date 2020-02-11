@@ -16,6 +16,10 @@ nnoremap <leader>/ :Rg<space>
 nnoremap K :Rg <C-R><C-W><cr>
 vnoremap K y:Rg <C-R>"<CR><cr>
 
+command! H :FZFMru
+let g:fzf_mru_relative = 1
+let g:fzf_mru_no_sort = 1
+
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
 

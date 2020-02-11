@@ -10,7 +10,10 @@ nnoremap <tab> :b#<cr>
 nnoremap <leader>l :noh<cr>
 
 command! W :w
+command! Q :q
 nnoremap Q <nop>
+nnoremap m q
+nnoremap q <nop>
 
 " Movements
 nnoremap j gj

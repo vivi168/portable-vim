@@ -23,7 +23,6 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/janko/vim-test'
   Plug 'https://github.com/godlygeek/tabular'
-  Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
   " Ruby
   Plug 'https://github.com/vim-ruby/vim-ruby'
@@ -50,6 +49,7 @@ call plug#begin(s:portable.'/plugged')
 
   " Themes & appearance
   Plug 'https://github.com/morhetz/gruvbox'
+  Plug 'https://github.com/junegunn/seoul256.vim'
   Plug 'https://github.com/lifepillar/vim-solarized8'
 call plug#end()
 
