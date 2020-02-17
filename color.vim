@@ -8,4 +8,4 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 end
 
-colorscheme seoul256
+colorscheme plain

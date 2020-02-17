@@ -46,11 +46,13 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
+  Plug 'https://github.com/pbogut/fzf-mru.vim'
 
   " Themes & appearance
   Plug 'https://github.com/morhetz/gruvbox'
   Plug 'https://github.com/junegunn/seoul256.vim'
   Plug 'https://github.com/lifepillar/vim-solarized8'
+  Plug 'https://github.com/andreypopp/vim-colors-plain'
 call plug#end()
 
 source $VIMHOME/color.vim

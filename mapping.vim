@@ -6,11 +6,15 @@ nmap [c :cprev<cr>
 nmap ]c :cnext<cr>
 nmap [b :bp<cr>
 nmap ]b :bn<cr>
+nmap [q :cprev<cr>
+nmap ]q :cnext<cr>
+command! O :copen
+command! Q :ccl
+
 nnoremap <tab> :b#<cr>
 nnoremap <leader>l :noh<cr>
 
 command! W :w
-command! Q :q
 nnoremap Q <nop>
 nnoremap m q
 nnoremap q <nop>
@@ -26,10 +30,13 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-" Quickfix window
-nmap <leader>q :ccl<cr>
-
 " Terminal
 nnoremap <leader>t :tab terminal<cr>
 nnoremap <leader>' :terminal<cr>
 nnoremap <leader>% :vert terminal<cr>
+
+" Grep
+set grepprg=rg\ --vimgrep\ --no-heading\ --no-ignore-vcs\ --hidden\ --smart-case
+nnoremap <leader>/ :grep<space>
+nnoremap K :grep <C-R><C-W><cr>
+vnoremap K y:grep <C-R>"<CR><cr>
