@@ -2,8 +2,6 @@
 let mapleader = "\<Space>"
 nnoremap <space> <nop>
 
-nmap [c :cprev<cr>
-nmap ]c :cnext<cr>
 nmap [b :bp<cr>
 nmap ]b :bn<cr>
 nmap [q :cprev<cr>
