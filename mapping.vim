@@ -36,5 +36,5 @@ nnoremap <leader>% :vert terminal<cr>
 " Grep
 set grepprg=rg\ --vimgrep\ --no-heading\ --no-ignore-vcs\ --hidden\ --smart-case
 nnoremap <leader>/ :grep<space>
-nnoremap K :grep <C-R><C-W><cr>
-vnoremap K y:grep <C-R>"<CR><cr>
+nnoremap K :grep '\b<cword>\b'<cr>
+vnoremap K y:grep '<C-R>"'<cr>
