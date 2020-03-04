@@ -13,10 +13,6 @@ command! -bang -nargs=* Rg
       \ "rg --vimgrep --no-ignore-vcs --hidden --smart-case --color=always ".<q-args>, 1, <bang>0
       \ )
 
-command! H :FZFMru
-let g:fzf_mru_relative = 1
-let g:fzf_mru_no_sort = 1
-
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
 

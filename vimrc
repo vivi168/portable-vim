@@ -46,7 +46,6 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
-  Plug 'https://github.com/pbogut/fzf-mru.vim'
 
   " Themes & appearance
   Plug 'https://github.com/morhetz/gruvbox'
