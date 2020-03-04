@@ -1,9 +1,8 @@
 runtime macros/matchit.vim
 
-" NERDTree
-command! E NERDTreeToggle
-command! F NERDTreeFind
-let NERDTreeQuitOnOpen=1
+" netrw
+let g:netrw_banner = 0
+command! F Explore
 
 " FZF
 nnoremap <c-f> :Files<cr>
