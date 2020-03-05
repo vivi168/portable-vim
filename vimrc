@@ -43,6 +43,7 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/junegunn/gv.vim'
 
   " Files
+  Plug 'https://github.com/scrooloose/nerdtree'
   Plug 'https://github.com/junegunn/fzf'
   Plug 'https://github.com/junegunn/fzf.vim'
 
