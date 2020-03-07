@@ -8,6 +8,9 @@ let NERDTreeQuitOnOpen=1
 " FZF
 nnoremap <c-f> :Files<cr>
 nnoremap <c-b> :Buffers<cr>
+nnoremap <leader>c :Commits<cr>
+nnoremap <leader>b :BCommits<cr>
+nnoremap <leader>g :GFiles?<cr>
 command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
       \ "rg --vimgrep --no-ignore-vcs --hidden --smart-case --color=always ".<q-args>, 1, <bang>0

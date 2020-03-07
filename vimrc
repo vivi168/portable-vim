@@ -31,7 +31,6 @@ call plug#begin(s:portable.'/.plugged')
 
   " Git
   Plug 'https://github.com/tpope/vim-fugitive'
-  Plug 'https://github.com/junegunn/gv.vim'
 
   " Files
   Plug 'https://github.com/preservim/nerdtree'
