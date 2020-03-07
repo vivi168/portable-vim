@@ -22,20 +22,11 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/tpope/vim-dispatch'
   Plug 'https://github.com/bronson/vim-trailing-whitespace'
   Plug 'https://github.com/janko/vim-test'
-  Plug 'https://github.com/godlygeek/tabular'
 
-  " Ruby
-  Plug 'https://github.com/vim-ruby/vim-ruby'
+  " Language specific
+  Plug 'https://github.com/sheerun/vim-polyglot'
   Plug 'https://github.com/tpope/vim-rails'
-
-  " Javascript
-  Plug 'https://github.com/neoclide/vim-jsx-improve'
-  Plug 'https://github.com/kchmck/vim-coffee-script'
-
-  " YAML
   Plug 'https://github.com/lmeijvogel/vim-yaml-helper'
-
-  " ASM
   Plug 'https://github.com/vivi168/vim-snes-asm'
 
   " Git
@@ -48,9 +39,6 @@ call plug#begin(s:portable.'/plugged')
   Plug 'https://github.com/junegunn/fzf.vim'
 
   " Themes & appearance
-  Plug 'https://github.com/morhetz/gruvbox'
-  Plug 'https://github.com/junegunn/seoul256.vim'
-  Plug 'https://github.com/lifepillar/vim-solarized8'
   Plug 'https://github.com/vivi168/vim-colors-plain'
 call plug#end()
 
@@ -63,8 +51,6 @@ se autoindent
 se backspace=indent,eol,start
 se smarttab
 se expandtab "insert tabs as spaces
-" File specific
-au BufNewFile,BufRead *.coffee set filetype=coffee
 
 " Files
 se encoding=utf8
