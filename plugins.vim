@@ -20,7 +20,7 @@ nnoremap <leader>ws :FixWhitespace<cr>
 let g:vim_yaml_helper#auto_display_path = 0
 
 " Vim Test
-nnoremap <silent> <Leader>rc :TestFile<CR>
+nnoremap <silent> <Leader>rf :TestFile<CR>
 nnoremap <silent> <Leader>rn :TestNearest<CR>
 nnoremap <silent> <Leader>rl :TestLast<CR>
 let test#strategy = "dispatch"
