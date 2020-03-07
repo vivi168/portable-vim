@@ -13,7 +13,7 @@ let &runtimepath = printf('%s,%s,%s/after', s:portable, &runtimepath, s:portable
 set undodir=$VIMHOME/undodir
 set undofile
 
-call plug#begin(s:portable.'/plugged')
+call plug#begin(s:portable.'/.plugged')
   " Utils
   Plug 'https://github.com/tpope/vim-repeat'
   Plug 'https://github.com/tpope/vim-commentary'
