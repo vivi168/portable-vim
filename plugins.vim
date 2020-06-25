@@ -6,7 +6,8 @@ command! F NERDTreeFind
 let NERDTreeQuitOnOpen=1
 
 " FZF
-nnoremap <c-f> :Files<cr>
+nnoremap <c-p> :Files<cr>
+nnoremap <c-f> :Rg<space>
 nnoremap <c-b> :Buffers<cr>
 nnoremap <leader>c :Commits<cr>
 nnoremap <leader>b :BCommits<cr>
@@ -15,6 +16,7 @@ command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
       \ "rg --vimgrep --no-ignore-vcs --hidden --smart-case --color=always ".<q-args>, 1, <bang>0
       \ )
+nnoremap K :Rg <c-r><c-w><cr>
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
