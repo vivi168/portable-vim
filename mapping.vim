@@ -6,14 +6,12 @@ nmap [b :bp<cr>
 nmap ]b :bn<cr>
 nmap [q :cprev<cr>
 nmap ]q :cnext<cr>
-command! O :copen
 command! Q :ccl
 
 nnoremap <tab> :b#<cr>
 nnoremap <leader>l :noh<cr>
 
 command! W :w
-nnoremap Q @q
 
 " Movements
 nnoremap j gj
