@@ -7,16 +7,14 @@ let NERDTreeQuitOnOpen=1
 
 " FZF
 nnoremap <c-p> :Files<cr>
-nnoremap <c-f> :Rg<space>
+nnoremap <c-f> :Rg<cr>
 nnoremap <c-b> :Buffers<cr>
 nnoremap <leader>c :Commits<cr>
 nnoremap <leader>b :BCommits<cr>
 nnoremap <leader>g :GFiles?<cr>
-command! -bang -nargs=* Rg
-      \ call fzf#vim#grep(
-      \ "rg --vimgrep --no-ignore-vcs --hidden --smart-case --color=always ".<q-args>, 1, <bang>0
-      \ )
 nnoremap K :Rg <c-r><c-w><cr>
+
+let g:fzf_preview_window = ''
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
@@ -28,7 +26,6 @@ let g:vim_yaml_helper#auto_display_path = 0
 nnoremap <silent> <Leader>rf :TestFile<CR>
 nnoremap <silent> <Leader>rn :TestNearest<CR>
 nnoremap <silent> <Leader>rl :TestLast<CR>
-let test#strategy = "dispatch"
 
 " Have Vim jump to the last position when reopening a file
 if has("autocmd")

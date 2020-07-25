@@ -13,6 +13,10 @@ nnoremap <leader>l :noh<cr>
 
 command! W :w
 
+" Open lines
+nnoremap <leader>o o<esc>
+nnoremap <leader>O O<esc>
+
 " Movements
 nnoremap j gj
 vnoremap j gj
