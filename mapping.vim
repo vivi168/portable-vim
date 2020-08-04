@@ -6,7 +6,7 @@ nmap [b :bp<cr>
 nmap ]b :bn<cr>
 nmap [q :cprev<cr>
 nmap ]q :cnext<cr>
-command! Q :ccl
+nnoremap <c-o> :copen<cr>
 
 nnoremap <tab> :b#<cr>
 nnoremap <leader>l :noh<cr>
@@ -35,3 +35,5 @@ nnoremap <leader>% :vert terminal<cr>
 
 " Grep
 set grepprg=rg\ --vimgrep\ --no-heading\ --no-ignore-vcs\ --hidden\ --smart-case
+nnoremap <c-f> :grep!<space>
+nnoremap K :grep! '\b<cword>\b'<cr>

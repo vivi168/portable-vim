@@ -4,17 +4,12 @@ runtime macros/matchit.vim
 command! E NERDTreeToggle
 command! F NERDTreeFind
 let NERDTreeQuitOnOpen=1
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
-" FZF
-nnoremap <c-p> :Files<cr>
-nnoremap <c-f> :Rg<cr>
-nnoremap <c-b> :Buffers<cr>
-nnoremap <leader>c :Commits<cr>
-nnoremap <leader>b :BCommits<cr>
-nnoremap <leader>g :GFiles?<cr>
-nnoremap K :Rg <c-r><c-w><cr>
-
-let g:fzf_preview_window = ''
+" CtrlP
+let g:ctrlp_user_command = 'rg --files --no-ignore-vcs --hidden'
+nnoremap <c-b> :CtrlPBuffer<cr>
+nnoremap <c-n> :CtrlPMRU<cr>
 
 " Fix white spaces
 nnoremap <leader>ws :FixWhitespace<cr>
@@ -23,9 +18,9 @@ nnoremap <leader>ws :FixWhitespace<cr>
 let g:vim_yaml_helper#auto_display_path = 0
 
 " Vim Test
-nnoremap <silent> <Leader>rf :TestFile<CR>
-nnoremap <silent> <Leader>rn :TestNearest<CR>
-nnoremap <silent> <Leader>rl :TestLast<CR>
+nnoremap <silent> <Leader>tf :TestFile<CR>
+nnoremap <silent> <Leader>tn :TestNearest<CR>
+nnoremap <silent> <Leader>tl :TestLast<CR>
 
 " Have Vim jump to the last position when reopening a file
 if has("autocmd")
